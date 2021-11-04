@@ -1,3 +1,5 @@
 module.exports = {
-    url: "mongodb://192.168.10.15:27017/pizza"
+    url: "mongodb://127.0.0.1:27017/pizza",
+    uri: "mongodb://127.0.0.1:27017",
+    db: "pizza"
 }
