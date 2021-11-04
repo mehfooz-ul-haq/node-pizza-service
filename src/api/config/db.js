@@ -1,5 +1,5 @@
-
-const logger = require("../config/logger");
+const Logger = require("../config/logger");
+const logger = new Logger(__filename)
 const dbConnection = (db) => {
 
     db.mongoose
@@ -8,10 +8,12 @@ const dbConnection = (db) => {
             useUnifiedTopology: true
         })
         .then(() => {
+            logger.info("Connected to the database!")
             console.log("Connected to the database!");
         })
         .catch(err => {
             logger.error(`Cannot connect to the database!", ${err}`);
+            console.log(`Cannot connect to the database!", ${err}`);
             process.exit();
         });
 
