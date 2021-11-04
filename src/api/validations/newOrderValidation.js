@@ -2,8 +2,8 @@ const {validationResult, check} = require('express-validator')
 
 const validationRules = () => {
     return [
-        check('name').not().isEmpty().isLength({min: 5}).withMessage('Name must have more than 5 characters.'),
-        check('email').not().isEmail().withMessage('Invalid email address.'),
+        check('name').not().isEmpty().withMessage('Name is required.'),
+        check('email').isEmail().withMessage('Invalid email address.'),
         check('phone').not().isEmpty().isLength({min: 5}).withMessage('Invalid phone number.'),
     ]
 }

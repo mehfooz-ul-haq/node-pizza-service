@@ -1,9 +1,12 @@
 module.exports = {
     db: {
-        url: "mongodb://192.168.10.15:27017/pizza"
+        url: "mongodb://127.0.0.1:27017/pizza",
+        uri: "mongodb://127.0.0.1",
+        port: 27017,
+        name: "pizza",
     },
     redis: {
-        host: '192.168.10.15',
+        host: '127.0.0.1',
         port: 6379,
         db: 1,
         password: null,

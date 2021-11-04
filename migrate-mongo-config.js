@@ -1,12 +1,12 @@
-const dbConfig = require("./src/api/config/dbConfig");
+const dbConfig = require("./src/api/config/config");
 
 const config = {
   mongodb: {
     // TODO Change (or review) the url to your MongoDB:
-    url: dbConfig.uri,
+    url: dbConfig.db.uri,
 
     // TODO Change this to your database name:
-    databaseName: dbConfig.db,
+    databaseName: dbConfig.db.name,
 
     options: {
       useNewUrlParser: true, // removes a deprecation warning when connecting
